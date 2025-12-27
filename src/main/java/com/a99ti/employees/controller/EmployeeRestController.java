@@ -2,6 +2,7 @@ package com.a99ti.employees.controller;
 
 import com.a99ti.employees.dao.EmployeeDAO;
 import com.a99ti.employees.entity.Employee;
+import com.a99ti.employees.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,16 +15,16 @@ import java.util.List;
 @RequestMapping("/api/employees")
 public class EmployeeRestController {
 
-    private EmployeeDAO employeeDAO;
+    private EmployeeService employeeService;
 
     @Autowired
-    public EmployeeRestController(EmployeeDAO theEmployeeDAO){
-        employeeDAO = theEmployeeDAO;
+    public EmployeeRestController(EmployeeService theEmployeeService){
+        employeeService = theEmployeeService;
     }
 
     @GetMapping
     public List<Employee> findAll(){
-        return employeeDAO.findAll();
+        return employeeService.findAll();
     }
 
 
