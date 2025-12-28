@@ -1,6 +1,5 @@
 package com.a99ti.employees.controller;
 
-import com.a99ti.employees.dao.EmployeeDAO;
 import com.a99ti.employees.entity.Employee;
 import com.a99ti.employees.request.EmployeeRequest;
 import com.a99ti.employees.service.EmployeeService;
@@ -10,7 +9,6 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
